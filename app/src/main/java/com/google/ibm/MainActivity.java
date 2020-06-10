@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
         markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("한국의 수도1");
         mMap.addMarker(markerOptions);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
