@@ -27,17 +27,19 @@ public class MainActivity extends AppCompatActivity
         mapFragment.getMapAsync(this);
     }
 
+float[][] arr;
+
     @Override
     public void onMapReady(final GoogleMap googleMap) {
 
         mMap = googleMap;
 
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        LatLng SEOUL = new LatLng(arr[1][0], arr[1][1]);
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도1");
+        markerOptions.title("arr[1]");
+        markerOptions.snippet(1 + "번째 최적의 위치");
         mMap.addMarker(markerOptions);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
