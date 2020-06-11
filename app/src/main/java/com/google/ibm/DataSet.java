@@ -27,7 +27,7 @@ class DataSet {
             String url = "jdbc:mysql://localhost:3306/ibm2020?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "asd3356");
-            System.out.println("연결 성공");
+            System.out.println("연결 성공!");
             String qu = "select * from spring";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(qu);
