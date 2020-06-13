@@ -27,23 +27,66 @@ public class MainActivity extends AppCompatActivity
         mapFragment.getMapAsync(this);
     }
 
-float[][] arr;
-
     @Override
     public void onMapReady(final GoogleMap googleMap) {
 
         mMap = googleMap;
 
-        LatLng SEOUL = new LatLng(arr[1][0], arr[1][1]);
+        // for loop를 통한 n개의 마커 생성
+            // 1. 마커 옵션 설정 (만드는 과정)
+            MarkerOptions makerOptions = new MarkerOptions();
+            makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                    .position(new LatLng(35.18, 129.07))
+                    .title("마커"); // 타이틀.
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("arr[1]");
-        markerOptions.snippet(1 + "번째 최적의 위치");
-        mMap.addMarker(markerOptions);
+            // 2. 마커 생성 (마커를 나타냄)
+            mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(37.45, 126.7))
+                .title("마커"); // 타이틀.
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-    }
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(35.18, 129.07))
+                .title("마커"); // 타이틀.
 
-}
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(37.67, 128.7))
+                .title("마커"); // 타이틀.
+
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(36.82,127.1))
+                .title("마커"); // 타이틀.
+
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(35.83, 129.17))
+                .title("마커"); // 타이틀.
+
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(36.01, 129.34))
+                .title("마커"); // 타이틀.
+
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+        makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                .position(new LatLng(35.22, 128.68))
+                .title("마커"); // 타이틀.
+
+        // 2. 마커 생성 (마커를 나타냄)
+        mMap.addMarker(makerOptions);
+
+
+
+        // 카메라를 위치로 옮긴다.
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(35.18, 129.07)));
+
+}}
